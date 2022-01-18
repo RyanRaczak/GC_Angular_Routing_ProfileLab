@@ -1,0 +1,19 @@
+<label for="editName">Edit Name:</label><br/>
+<input type="text" value="{{profile.name}}" id="editName"/>
+<br/><br/>
+
+<label for="editContact">Edit Contact:</label><br/>
+<input type="text" value="{{profile.contact}}" id="editContact"/>
+<br/><br/>
+
+<label for="editBio">Edit Bio:</label><br/>
+<input type="text" value="{{profile.bio}}" id="editBio"/>
+<br/><br/>
+
+<label>Edit Pic:</label><br/>
+<div *ngFor="let image of profile.picOptions">
+    <input type="radio" id="editPic" name="editPic" value="{{image}}"/>
+    <img src="{{image}}"/>
+</div>
+
+<button (click)="editInput()">Save Changes</button>
